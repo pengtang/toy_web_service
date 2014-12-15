@@ -9,7 +9,8 @@ import java.util.Random;
 
 import io.spring.guides.gs_producing_web_service.GetToyRequest;
 import io.spring.guides.gs_producing_web_service.GetToyResponse;
-import io.spring.guides.gs_producing_web_service.GetToyJobID;
+import io.spring.guides.gs_producing_web_service.GetJobRequest;
+import io.spring.guides.gs_producing_web_service.GetJobResponse;
 @Endpoint
 public class ToyEndpoint {
 	private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
@@ -22,22 +23,20 @@ public class ToyEndpoint {
 	}
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getToyRequest")
-	
-	@ResponsePayload
-	public GetToyJobID getJobID(@RequestPayload GetToyRequest request) {
-		GetToyJobID jobID = new GetToyJobID();
-		Random ran = new Random();
-		int x = ran.nextInt(100);
-		jobID.setJobID(x);
-		return jobID;
-	}	
-	
 	@ResponsePayload
 	public GetToyResponse getToy(@RequestPayload GetToyRequest request) {
 		GetToyResponse response = new GetToyResponse();
 		response.setToy(toyRepository.findToy(request.getName()));
 		return response;
 	}
-	
+
+
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getJobRequest")
+	@ResponsePayload
+	public GetJobResponse getJob(@RequestPayload GetJobRequest request) {
+		GetJobResponse response = new GetJobResponse();
+		response.setJobID(toyRepository.findJobID(request.getJob()));
+		return response;
+	}
 
 }
