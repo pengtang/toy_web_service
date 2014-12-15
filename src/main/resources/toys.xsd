@@ -28,7 +28,7 @@
     <xs:element name="getJobResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="jobID" type="tns:jobID"/>
+                <xs:element name="jobID" type="xs:int"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -38,12 +38,6 @@
             <xs:element name="name" type="xs:string"/>
             <xs:element name="size" type="xs:double"/>
             <xs:element name="company" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="jobID">
-        <xs:sequence>
-            <xs:element name="jobID" type="xs:int"/>
         </xs:sequence>
     </xs:complexType>
 

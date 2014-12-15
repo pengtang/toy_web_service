@@ -4,7 +4,6 @@ import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.spring.guides.gs_producing_web_service.JobID;
 import io.spring.guides.gs_producing_web_service.Toy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
@@ -45,9 +44,7 @@ public class ToyRepository {
 		return result;
 	}
 	
-	public JobID findJobID(int job) {
-		JobID result = new JobID();
-		result.setJobID(job*2+1);
-		return result;		
+	public int findJobID(int job) {
+		return (job*2+1);		
 	}
 }

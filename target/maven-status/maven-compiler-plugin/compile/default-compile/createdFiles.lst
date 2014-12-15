@@ -1,12 +1,11 @@
+toy\WebServiceConfig.class
 toy\Application.class
+toy\ToyEndpoint.class
+io\spring\guides\gs_producing_web_service\GetToyResponse.class
 io\spring\guides\gs_producing_web_service\ObjectFactory.class
 io\spring\guides\gs_producing_web_service\Toy.class
 io\spring\guides\gs_producing_web_service\GetJobRequest.class
 io\spring\guides\gs_producing_web_service\GetToyRequest.class
-io\spring\guides\gs_producing_web_service\GetJobResponse.class
-io\spring\guides\gs_producing_web_service\JobID.class
-toy\WebServiceConfig.class
-toy\ToyEndpoint.class
-io\spring\guides\gs_producing_web_service\GetToyResponse.class
 io\spring\guides\gs_producing_web_service\package-info.class
+io\spring\guides\gs_producing_web_service\GetJobResponse.class
 toy\ToyRepository.class

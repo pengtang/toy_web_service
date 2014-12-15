@@ -3,7 +3,7 @@
    <soapenv:Header/>
    <soapenv:Body>
       <gs:getJobRequest>
-         <gs:name>0</gs:name>
+         <gs:job>12</gs:job>
       </gs:getJobRequest>
    </soapenv:Body>
 </soapenv:Envelope>
