@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getToyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getToyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="toy" type="tns:toy"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getToyJobID">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jobID" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="toy">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="size" type="xs:double"/>
+            <xs:element name="company" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
